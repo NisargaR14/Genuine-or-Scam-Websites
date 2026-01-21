@@ -1,0 +1,97 @@
+:root {
+  --card-bg: #ffffff;
+  --accent: #0b5a65;
+  --danger: #c62828;
+  --success: #2e7d32;
+}
+
+body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url("/static/images/main.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  transition: background-image 0.4s ease-in-out;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/static/images/human.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+  transition: background-image 0.4s ease-in-out, filter 0.4s ease-in-out;
+}
+
+.card {
+  margin-left: 60px;
+  max-width: 420px;
+  background: var(--card-bg);
+  padding: 26px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+input[type="text"], input[type="url"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  margin-top: 12px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 14px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+.output {
+  margin-top: 18px;
+  font-weight: 600;
+  min-height: 48px;
+}
+
+.output.success { color: var(--success); }
+.output.fail { color: var(--danger); }
+
+/* Details panel styling */
+.details {
+  margin-top: 12px;
+  background: rgba(250,250,250,0.95);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 14px;
+  color: #222;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.details div { margin: 6px 0; }
+.details strong { width: 120px; display: inline-block; color: #333; }
+
+/* Dark mode */
+.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+.dark-mode .card { background: #1b1b1b; color: #eee; box-shadow: 0 8px 30px rgba(0,0,0,0.5); }
+.dark-mode .details { background: rgba(26,26,26,0.9); color: #eee; }

@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Genuine or Scam Website Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div id="bg"></div>
+
+  <div class="card">
+    <h1>🔍 Genuine or Scam Website Analyzer</h1>
+
+    <input id="urlInput" type="text" placeholder="Enter URL or domain (e.g., google.com)" />
+    <button id="checkBtn">Check Website</button>
+
+    <div id="output" class="output"></div>
+
+    <button id="toggleMode">Toggle Dark Mode</button>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
